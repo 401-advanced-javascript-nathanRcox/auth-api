@@ -3,6 +3,7 @@
 // 3rd Party Resources
 const express = require('express');
 const cors = require('cors');
+
 const morgan = require('morgan');
 
 // Esoteric Resources
@@ -15,9 +16,9 @@ const v2Routes = require('./routes/v2.js');
 
 // Prepare the express app
 const app = express();
+app.use(cors());
 
 // App Level MW
-app.use(cors());
 app.use(morgan('dev'));
 
 app.use(express.json());
@@ -30,7 +31,7 @@ app.use('/api/v1', v1Routes);
 app.use('/api/v2', v2Routes);
 app.use(authRoutes);
 
-app.get('/', (req, res) => res.send('Howdy, pardner!'))
+app.get('/', (req, res) => res.send('Howdy, folks!'))
 
 // Catchalls
 app.use('*', notFound);
