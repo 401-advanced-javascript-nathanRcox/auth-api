@@ -22,7 +22,7 @@ router.param('model', (req, res, next) => {
         req.model = models.get(modelName);
         next();
       } else {
-        next("Invalid Model");
+        next('Invalid Model');
       }
     }
   } catch (error) {
