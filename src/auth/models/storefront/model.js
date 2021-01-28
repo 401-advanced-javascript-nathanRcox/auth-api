@@ -11,6 +11,6 @@ const storefrontSchema = mongoose.Schema({
   quantityInCart: { type: Number, required: true },
 });
 
-const storefrontModel = mongoose.model('food', storefrontModel);
+const storefrontModel = mongoose.model('storefront', storefrontModel);
 
 module.exports = storefrontSchema;
