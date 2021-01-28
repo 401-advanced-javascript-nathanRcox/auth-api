@@ -30,7 +30,7 @@ router.param('model', (req, res, next) => {
   }
 });
 
-// router.get('/', (req, res) => res.send('Howdy, folks!'));
+router.get('/', (req, res) => res.send('Howdy, pardner!'));
 router.get('/:model', handleGetAll);
 router.get('/:model/:id', handleGetOne);
 router.post('/:model', handleCreate);
